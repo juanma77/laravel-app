@@ -14,7 +14,14 @@ class CreateReviewsTable extends Migration
     public function up()
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->integer('puntuaction');
+            $table->string('title');
+            $table->string('resume');
+            $table->string('ip');
+            $table->string('date');
+            $table->string('enterpriseName');
+            $table->string('userName');
             $table->timestamps();
         });
     }
